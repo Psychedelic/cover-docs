@@ -27,14 +27,14 @@ nav:
   - <b>Overview</b> 🔎: "#"
   - What is Cover?: overview/what-is-cover.md
   - <b>Verifying Canister Code</b> ✅: "#"
-  - Integrate Cover - Getting Started: integrate-cover/getting-started.md
-  - Setting up the Cover GitHub Action: integrate-cover/getting-started.md/#github-action
-  - <b>Query Canister Verification Status</b> ❓: "#"
+  - Getting Started: integrate-cover/getting-started.md
+  - Cover's GitHub Action: integrate-cover/getting-started.md/#github-action
+  - <b>Query a Canister's Status</b> ❓: "#"
   - Checking Verification Status: check-status/getting-started.md
   - View Build History: check-status/getting-started.md/#build-history
   - <b>Repositories & Tools</b> 🧰: "#"
-  - Cover Repo: "https://github.com/psychedelic/cap"
-  - GitHub Action Repo: "https://github.com/Psychedelic/cap/tree/main/sdk"
+  - Cover Repo: "https://github.com/psychedelic/cover"
+  - GitHub Action Repo: "https://github.com/psychedelic/cover"
   - <b>Resources</b> 📚:
     - The Internet Computer: "https://dfinity.org/faq"
     - Disclaimer: resources/disclaimer.md
