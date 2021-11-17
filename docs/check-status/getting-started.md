@@ -25,6 +25,11 @@ All that information will be versioned and can be utilized to compare the WASM c
 {{{instructions on how to fetch the data}}}
 
 
-## Compare Data & Verify a Canister's Verification Status
+## View a Canister's Entry/Build History
+
+{{{instructions with an example call to compare the data we get from Cover to the data of the live canister on the mainner}}}
+
+
+## Compare &  Verify a Canister's Verification Status
 
 {{{instructions with an example call to compare the data we get from Cover to the data of the live canister on the mainner}}}
