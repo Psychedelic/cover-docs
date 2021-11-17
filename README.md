@@ -1,6 +1,6 @@
 # CAP's Documentation
 
-Welcome [CAP's](https://cap.ooo/) documentation! The open internet service for transaction history and provenance on the Internet Computer.
+Welcome [Cover's](https://covercode.ooo/) documentation! The open internet service for code verification on the Internet Computer.
 
 ## Getting started
 
