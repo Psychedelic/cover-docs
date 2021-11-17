@@ -17,14 +17,14 @@
   {% elif page and page.og_image and not page.is_homepage %}
   <meta property="og:image" content="{{ page.meta.og_image }}">
   {% else %}
-  <meta property="og:image" content="https://storageapi.fleek.co/fleek-team-bucket/logos/cap-meta.png">
+  <meta property="og:image" content="https://storageapi.fleek.co/fleek-team-bucket/logos/cover-meta.png">
   {% endif %}
-  <meta property="og:image:alt" content="CAP">
+  <meta property="og:image:alt" content="Cover">
   <meta property="og:image:type" content="image/png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@cap_ois">
-  <meta name="twitter:creator" content="@cap_ois">
+  <meta name="twitter:site" content="@cover_ois">
+  <meta name="twitter:creator" content="@cover_ois">
   {% if page and page.meta and page.meta.title %}
     <meta property="twitter:title" content="{{ page.meta.title }}">
   {% elif page and page.title and not page.is_homepage %}
@@ -38,8 +38,8 @@
   {% elif page and page.og_image and not page.is_homepage %}
   <meta name="twitter:image" content="{{ page.meta.og_image }}">
   {% else %}  
-  <meta name="twitter:image" content="https://storageapi.fleek.co/fleek-team-bucket/logos/cap-meta.png">
+  <meta name="twitter:image" content="https://storageapi.fleek.co/fleek-team-bucket/logos/cover-meta.png">
   {% endif %}
-  <meta name="twitter:image:alt" content="CAP">
+  <meta name="twitter:image:alt" content="Cover">
 
 {% endblock %}

@@ -1,15 +1,15 @@
-site_name: "Documentation | CAP"
-site_author: cap.ooo
-site_description: CAP is an open internet service that provides an activity and transaction history all assets (Token/NFTs/etc...) on the Internet Computer can integrate to.
-site_url: https://docs.cap.ooo/
+site_name: "Documentation | Cover"
+site_author: covercode.ooo
+site_description: Cover is an open internet service for code verification on the Internet Computer, helping to reduce risk of malicious apps and canisters on the network.
+site_url: https://docs.covercode.ooo/
 copyright: '© 2021 Built by Fleek LLC'
-repo_name: psychedelic/cap
-repo_url: https://github.com/psychedelic/cap
+repo_name: psychedelic/cover
+repo_url: https://github.com/psychedelic/cover
 theme:
   name: material
   custom_dir: overrides
   favicon: './imgs/favicon.ico'
-  logo: './imgs/cap.png'
+  logo: './imgs/logo.png'
   font:
     text: 'Open Sans'
 extra_css:
@@ -23,17 +23,17 @@ markdown_extensions:
   - toc:
       permalink: true
 nav:
-  - Welcome to CAP 👋: index.md
-  - <b>Overview</b> 👑: "#"
-  - What is CAP?: overview/what-is-cap.md
-  - <b>Integrate an NFT/Token</b> ⚡: "#"
-  - CAP SDK - Getting Started: integrate-cap/getting-started.md
-  - <b>Show CAP Data in UI/Apps</b> 📜: "#"
-  - CAP JS - Getting Started: surface-data/getting-started.md
-  - <b>Examples & Tools</b> 🧰: "#"
-  - CAP Main Repo: "https://github.com/psychedelic/cap"
-  - CAP SDK Repo: "https://github.com/Psychedelic/cap/tree/main/sdk"
-  - CAP-js Repo: "https://github.com/psychedelic/cap-js"
+  - Welcome to Cover ✅: index.md
+  - <b>Overview</b> 🔎: "#"
+  - What is Cover?: overview/what-is-cover.md
+  - <b>Verifying Canister Code</b> ✅: "#"
+  - Integrate Cover - Getting Started: integrate-cover/getting-started.md
+  - Setting up the Cover GitHub Action: integrate-cover/getting-started.md/#github-action
+  - <b>Query Canister Verification Status</b> ❓: "#"
+  - Checking if a Canister is Verified: surface-data/getting-started.md
+  - <b>Repositories & Tools</b> 🧰: "#"
+  - Cover Repo: "https://github.com/psychedelic/cap"
+  - GitHub Action Repo: "https://github.com/Psychedelic/cap/tree/main/sdk"
   - <b>Resources</b> 📚:
     - The Internet Computer: "https://dfinity.org/faq"
     - Disclaimer: resources/disclaimer.md
@@ -42,8 +42,8 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/psychedelic/cap/
+      link: https://github.com/psychedelic/cover/
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/cap_ois
+      link: https://twitter.com/cover_ooo
     - icon: fontawesome/brands/discord
       link: https://discord.gg/yVEcEzmrgm
