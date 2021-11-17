@@ -1,73 +1,41 @@
 ---
 date: "1"
 ---
-# Welcome to CAP 👋
+# Welcome to Cover ✅
 
-![](imgs/mainn.png)
+![](./imgs/mainn.png)
 
-Welcome to CAP's documentation. CAP is an open internet service providing transaction history & asset provenance for NFTs & Tokens on the Internet Computer. It solves the huge IC problem that assets don’t have native transaction history, and does so in a scalable, trustless and seamless way so any NFT/Token can integrate with one line of code.
+Cover is an open internet service that can be used by developers to verify and prove that a canister's code matches the open source code. Reducing the risk of malicious apps & increasing transparency and trust.
 
-CAP provides services to... NFTs/Tokens developers by giving them a plug-n-play history for their assets and UIs/Dapps/Sites on the Internet Computer that want to show an asset's history to users.
-
-
-- Visit [our website](https://cap.ooo)
-- Read [our announcement](https://medium.com/@cap_ois/db9bdfe9129f?source=friends_link&sk=924b190ea080ed4e4593fc81396b0a7a)
-- Visit [CAP's main repository](https://github.com/psychedelic/cap) 
-- Visit [CAP-SDK repository](https://github.com/Psychedelic/cap/tree/main/sdk)
-- Visit [CAP-JS repository](https://github.com/psychedelic/cap-js) 
+- Visit [our website](https://covercode.ooo)
+- Visit [Cover's repository](https://github.com/psychedelic/cover)
+- Follow [Cover on Twitter](https://twitter.com/cover_ois) 
 
 
 
-## 👑 CAP - Certified Asset Provenance
+## ✅ Cover - Code Verification on the Internet Computer
 
-CAP is an open internet service on the Internet Computer that developers can utilize to give their NFT, Token (and soon many more NFTs/Tokens) traceability and provenance, with a transaction/history service.
+Cover as an open internet service is integrated into the developer's natural workflow using a GitHub action that, during the developer's flow for producing their canister's WASM file, submits that build/WASM file details to the Cover registry.
 
-- [Visit the overview section to learn more about how it works.](https://docs.cap.ooo/overview/what-is-cap/)
+That submission includes all details (WASM checksum, code repository, etc.) needed to cross-reference to the live canister on mainnet (by comparing WASM checksums). If the WASM checksums match, then the canister's code is verified openly in Cover, if it doesn't, it means the code submitted to Cover isn't the same as the live canister on mainnet (unverified, and potentially malicious).
 
-
-## 🧰 Getting Started with CAP
-
-CAP as an open internet service works the following way. The main canister for CAP acts as an orchestrator that can spawn new history canisters for individual projects (NFTs, Token Canisters, DEX's, etc.).
-
-- CAP's Mainnet canister: `lj532-6iaaa-aaaah-qcc7a-cai`
-
-!!! Important
-
-    CAP is currently in early stages 🚧 this documentation will continue to grow with the project!
-
-### 🛢️ Integrating NFT/Token Canister to CAP to give it a History.
-
-Looking to integrate CAP to an NFT or Token to give it a transaction/activity history in CAP? 
-
-1. [Get started with the CAP SDK.](https://docs.cap.ooo/integrate-cap/getting-started/)
-
-### 📈 Integrating CAP to an UI/App to Show an Assets History/Activity.
-
-Want to query data from CAP from your UI/App/Dapp website? With CAP you can provide your users with great UI/UX's by:
-
-Displaying historic data of an asset (e.g. NFT's past sales and transfers); showing transaction history of custom tokens in your platform; or by creating UI's with general asset statistics (consuming all data in CAP!).
+- [Visit the overview section to learn more about how it works.](https://docs.covercode.ooo/overview/what-is-cover/)
 
 
-- [Get started with the CAP-js library.](https://docs.cap.ooo/surface-data/getting-started/)
+## 🧰 Getting Started with Cover
 
+With Cover, there are primarily **two use cases**. One is developer oriented, who will use CAP to submit a verification for their canister (to ensure the live WASM file matches the shared open source code) as a public check and proof of the code's veracity. 
 
-## 👑 Moonwalkers, Portal, and other Early Supporters
+On the other hand, users or UIs can query Cover's registry to check a canister's latest verification submission (latest build) and see if it matches the live canister's checksum (if it does, it's verified, else it is not).
 
-We are kickstarting the CAP ecosystem with a group of early Tokens & NFTs that will be integrating CAP to give their NFTs/Token an activity history!
+### 1. Using Cover to Verify your Canister's Code (WASM)
 
-- [Moonwalkers (NFTs)](https://twitter.com/ic_gallery)
-- [Portal (NFTs)](https://portal.one/)
-- [DFinance (Tokens)](https://dfinance.ai/)
-- [Cycles Token (Tokens)](https://dank.ooo/xtc/)
-- [ICSnakes (NFTs)](https://xn--4n8h7h.ws/)
-- [ICPSquad (NFTs)](https://twitter.com/ICPSquadNFT)
+Integrate Cover's GitHub action in your development workflow so that you can start submitting your canister/WASM build details for verification upon each new build/push.
 
-## 🔌 Plug's Integration and Role
+- [Visit our getting started guide.](https://docs.covercode.ooo/overview/what-is-cover/)
 
-As for **Plug's integration**, it isn't only to show users the transaction history of tokens/NFTs in their wallet that support Plug. 
+### 2. Querying the Cover Registry to Check a Canister's Verification Status
 
-Plug will also integrate CAP to play an important role in seeding the transaction history for any project that can be held/surfaced in Plug, whether it has already integrated CAP or not.
+To check a canister's verification status in Cover, you need to query its registry and compare the WASM checksum with the live canister on the Internet Computer's mainnet.
 
-This way, Plug can create an early activity history for users on their wallet, who will see an activity for any NFT/Token they trade with through Plug. Then, when the NFT/Token fully integrates CAP it will already have some records to populate their history canister.
-
-Still, **we strongly recommend** that projects fully integrate CAP directly into their canisters so all activity across the entire IC will be captured, and not just activity going through Plug.
+- [Visit our guide for thi.](https://docs.covercode.ooo/check-status/what-is-cover/)

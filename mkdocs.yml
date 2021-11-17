@@ -30,7 +30,8 @@ nav:
   - Integrate Cover - Getting Started: integrate-cover/getting-started.md
   - Setting up the Cover GitHub Action: integrate-cover/getting-started.md/#github-action
   - <b>Query Canister Verification Status</b> ❓: "#"
-  - Checking if a Canister is Verified: surface-data/getting-started.md
+  - Checking Verification Status: check-status/getting-started.md
+  - View Build History: check-status/getting-started.md/#build-history
   - <b>Repositories & Tools</b> 🧰: "#"
   - Cover Repo: "https://github.com/psychedelic/cap"
   - GitHub Action Repo: "https://github.com/Psychedelic/cap/tree/main/sdk"
