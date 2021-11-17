@@ -1,4 +1,4 @@
-# CAP's Documentation
+# Cover's Documentation
 
 Welcome [Cover's](https://covercode.ooo/) documentation! The open internet service for code verification on the Internet Computer.
 
