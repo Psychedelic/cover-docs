@@ -28,10 +28,10 @@ nav:
   - What is Cover?: overview/what-is-cover.md
   - <b>Verifying Canister Code</b> ✅: "#"
   - Getting Started: integrate-cover/getting-started.md
-  - Cover's GitHub Action: integrate-cover/getting-started/#github-action
+  - Cover's GitHub Action: integrate-cover/getting-started/#using-covers-github-action
   - <b>Query a Canister's Status</b> ❓: "#"
   - Checking Verification Status: check-status/getting-started.md
-  - View Build History: check-status/getting-started/#build-history
+  - View Build History: check-status/getting-started/#view-a-canisters-entrybuild-history
   - <b>Repositories & Tools</b> 🧰: "#"
   - Cover Repo: "https://github.com/psychedelic/cover"
   - GitHub Action Repo: "https://github.com/psychedelic/cover"
