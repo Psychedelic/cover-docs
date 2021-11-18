@@ -7,7 +7,9 @@ date: "1"
 
 Cover is an open internet service that can be used by developers to verify and prove that a canister's code matches the open source code. Reducing the risk of malicious apps & increasing transparency and trust.
 
-You can think of Cover as a registry of verified source code that developers/publishers submit to Cover's registry, where a record of each version is kept. Since a canister's code can't be verified directly, the data in Cover's registry is used to compare with the live canister's WASM checksum matches the public records in Cover, and is not a modified, malicious, or undisclosed version. This helps reduce **malicious actors with transparency, and visibility**, since developers will strive to maintain a public, and matching, record of their builds. Anyone can check a canister's submitted builds in Covers registry, and compare them to their live version to confirm its verified status, and that the open source code indeed matches the live implementation.
+You can think of Cover as a registry of verified source code that developers/publishers submit their canister's code to (a version registry is kept). Since a canister's code can't be verified directly, the data in Cover's registry is used to compare with the live canister's WASM checksum matches the public records in Cover, and is not a modified, malicious, or undisclosed version. 
+
+This helps reduce **malicious actors with transparency, and visibility**, since developers will strive to maintain a public, and matching, record of their builds. Anyone can check a canister's submitted builds in Covers registry, and compare them to their live version to confirm its verified status, and that the open source code indeed matches the live implementation.
 
 - Visit [our website](https://covercode.ooo)
 - Visit [Cover's repository](https://github.com/psychedelic/cover)
