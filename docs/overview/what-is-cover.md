@@ -16,7 +16,7 @@ Cover helps mitigate **malicious actors, modified code, or unsafe practices** by
 
 ## How does Cover work?
 
-![](imgs/arc.svg)
+![](imgs/arcc.svg)
 
 The open internet service is fairly straightforward in terms of architecture. There are two main components in Cover.
 
