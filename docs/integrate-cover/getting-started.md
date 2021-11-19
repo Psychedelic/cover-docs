@@ -19,4 +19,79 @@ The concept is simple. Using this GitHub action, you can integrate Cover into yo
 
 ## Using Cover's GitHub Action
 
-To get started...
+What will you need to get started? **Your canister´s repository should be on GitHub, and open source**, and you need the Canister ID of the canister you are developing.
+
+Inside of your canister repo create a directory `.github/workflows/` and add a `myBuild.yml` file, **that includes Cover's GitHub Action**. This is what that snippet of code should look like, where you pass:
+
+- `canister_id`: Canister ID of the canister you're making a submission for.
+- `wasm_path`: file path to the wasm that will be submitted.
+
+```yaml
+      - name: Cover Validator Plugin
+        uses: Psychedelic/cover/GithubActionPlugin@main
+        with:
+          canister_id: "iftvq-niaaa-aaaai-qasga-cai"
+          wasm_path: "target/wasm32-unknown-unknown/release/canister.wasm"
+```
+
+### Using Cover's Canister as an Example
+
+Let's give an example by showing how we would submit Cover's own canister for verification! To see a full build example see [dfx.yml](.github/workflows/dfx.yml)
+
+You can see that here Cover's GitHub Action is run last after the WASM is built.
+
+```yaml
+
+name: Example canister build using build.js 
+
+on:
+  push:
+    branches:
+      - production
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+      - run: npm install
+
+      - name: Install cmake
+        run: |
+          sudo apt-get update
+          sudo apt-get install cmake -y
+
+      - name: Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: ${{ matrix.rust }}
+          profile: minimal
+          default: true
+          override: true
+          target: wasm32-unknown-unknown
+
+      - name: IC CDK Optimizer
+#        Generates target/wasm32-unknown-unknown/release/canister.wasm 
+        run: cargo install ic-cdk-optimizer
+
+      - name: Build WASM
+        run: node build.js --name cover
+
+      - name: Cover Validator Plugin
+        uses: Psychedelic/cover/GithubActionPlugin@main
+        with:
+          canister_id: "iftvq-niaaa-aaaai-qasga-cai"
+          wasm_path: "target/wasm32-unknown-unknown/release/canister.wasm"
+```
+
+As simple as that!
+
+Whenever you push your code using `production` or `main` branches, the above workflow will be triggered.
+
+If you successfully generated the canister.wasm the [Cover Validation Plugin](./GithubActionPlugin) will call an AWS Lambda Function that will add the validation results to the [Cover canister](https://ic.rocks/principal/iftvq-niaaa-aaaai-qasga-cai).

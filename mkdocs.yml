@@ -31,7 +31,6 @@ nav:
   - Cover's GitHub Action: integrate-cover/getting-started/#using-covers-github-action
   - <b>Query a Canister's Status</b> ❓: "#"
   - Checking Verification Status: check-status/getting-started.md
-  - View Build History: check-status/getting-started/#view-a-canisters-entrybuild-history
   - <b>Repositories & Tools</b> 🧰: "#"
   - Cover Repo: "https://github.com/psychedelic/cover"
   - GitHub Action Repo: "https://github.com/psychedelic/cover"
@@ -45,6 +44,6 @@ extra:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/psychedelic/cover/
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/cover_ooo
+      link: https://twitter.com/cover_ois
     - icon: fontawesome/brands/discord
       link: https://discord.gg/yVEcEzmrgm
