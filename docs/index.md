@@ -15,6 +15,10 @@ This helps reduce **malicious actors with transparency, and visibility**, since 
 - Visit [Cover's repository](https://github.com/psychedelic/cover)
 - Follow [Cover on Twitter](https://twitter.com/cover_ois) 
 
+!!! Important
+
+    This is an alpha release ✨ so that developers can start to play around, test the general Cover architecture during the weekend, and provide feedback to us! The alpha registry shouldn't be considered dependable yet. We will follow-up next week with a release that will include the permissioning ruling necessary to ensure all submissions are fully trusted.
+
 
 ## ✅ Cover - Code Verification on the Internet Computer
 

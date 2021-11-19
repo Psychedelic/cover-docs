@@ -8,6 +8,11 @@ date: "1"
 Whether you are an UI/interface wanting to surface a Canister's verification status in Cover; or a user/developer wanting to confirm your live canister's WASM checksum matches your latest submission on Cover (and therefore is considered verified!), you will need to **query Cover for this information**.
 
 
+!!! Important
+
+    This is an alpha release ✨ so that developers can start to play around, test the general Cover architecture during the weekend, and provide feedback to us! The alpha registry shouldn't be considered dependable yet. We will follow-up next week with a release that will include the permissioning ruling necessary to ensure all submissions are fully trusted.
+
+
 **What information can you query from Cover?**
 
 You can query **all the information** that is provided when new submissions are made, that includes:
