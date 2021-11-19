@@ -23,7 +23,7 @@ All that information will be versioned and can be utilized to compare the WASM c
 ## Querying Cover's Registry for a Canister ID
 
 
-After a few minutes, you should be able to query the Cover canister. You can either call it directly:
+To check a canister's verification status in Cover, you have to query the Cover canister, **which you can do so for example through the DFX CLI.** You can either call it directly:
 
 ```sh
 dfx canister --network=ic call iftvq-niaaa-aaaai-qasga-cai get_verification_by_canister_id '(principal"rrkah-fqaaa-aaaaa-aaaaq-cai")'
