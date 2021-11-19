@@ -39,10 +39,10 @@ On the other hand, users or UIs can query Cover's registry to check a canister's
 
 Integrate Cover's GitHub action in your development workflow so that you can start submitting your canister/WASM build details for verification upon each new build/push.
 
-- [Visit our getting started guide.](https://docs.covercode.ooo/overview/what-is-cover/)
+- [Visit our getting started guide.](https://docs.covercode.ooo/integrate-cover/getting-started/)
 
 ### 2. Querying the Cover Registry to Check a Canister's Verification Status
 
 To check a canister's verification status in Cover, you need to query its registry and compare the WASM checksum with the live canister on the Internet Computer's mainnet.
 
-- [Visit our guide for querying a canister's verification status.](https://docs.covercode.ooo/check-status/what-is-cover/)
+- [Visit our guide for querying a canister's verification status.](https://docs.covercode.ooo/check-status/getting-started/)
