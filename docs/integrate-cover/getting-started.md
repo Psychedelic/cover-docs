@@ -36,7 +36,7 @@ Inside of your canister repo create a directory `.github/workflows/` and add a `
 
 ### Using Cover's Canister as an Example
 
-Let's give an example by showing how we would submit Cover's own canister for verification! To see a full build example see [dfx.yml](.github/workflows/dfx.yml)
+Let's give an example by showing how we would submit Cover's own canister for verification! To see a full build example see [build.yml](.github/workflows/build.yml)
 
 You can see that here Cover's GitHub Action is run last after the WASM is built.
 
@@ -53,41 +53,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    container:
+      image: fleek/dfxrust
+
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16.x
-      - run: npm install
-
-      - name: Install cmake
-        run: |
-          sudo apt-get update
-          sudo apt-get install cmake -y
-
-      - name: Rust toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: ${{ matrix.rust }}
-          profile: minimal
-          default: true
-          override: true
-          target: wasm32-unknown-unknown
-
-      - name: IC CDK Optimizer
-#        Generates target/wasm32-unknown-unknown/release/canister.wasm 
-        run: cargo install ic-cdk-optimizer
-
       - name: Build WASM
-        run: node build.js --name cover
+          # HACK: set HOME to get github actions to execute correctly
+          export HOME=/root
+          export PATH="$HOME/.cargo/bin:${PATH}"
+          # Start build
+          yarn
+          MODE=PRODUCTION dfx build cover --check
 
       - name: Cover Validator Plugin
         uses: Psychedelic/cover/GithubActionPlugin@main
         with:
           canister_id: "iftvq-niaaa-aaaai-qasga-cai"
-          wasm_path: "target/wasm32-unknown-unknown/release/canister.wasm"
+          wasm_path: ".dfx/local/canisters/cover/cover.wasm"
 ```
 
 As simple as that!
