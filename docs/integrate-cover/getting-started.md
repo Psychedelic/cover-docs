@@ -79,3 +79,22 @@ As simple as that!
 Whenever you push your code using `production` or `main` branches, the above workflow will be triggered.
 
 If you successfully generated the canister.wasm the [Cover Validation Plugin](./GithubActionPlugin) will call an AWS Lambda Function that will add the validation results to the [Cover canister](https://ic.rocks/principal/iftvq-niaaa-aaaai-qasga-cai).
+
+**There is some work, however** that you need to do to ensure GitHub is able to wild the same WASM files as you do locally, see the section below:
+
+### Matching Canister Builds
+
+In order to get the same WASM files on github actions and locally, we need to ensure that the build environment on github actions is EXACTLY the same as the local one. 
+Thus, if you want to generate a wasm file locally, you must use the same docker image as the github actions is using.
+
+You can either provide your own docker image (We suggest you use ubuntu:20:04 at the base) or 
+you use our fleek/dfxrust docker image that includes tools needed to build Rust based canisters. 
+The fleek/dfxrust image is build with this [Dockerfile](GithubActionPlugin/dockers/dfxrust/Dockerfile). 
+
+#### Executing local build 
+
+To execute a local build using fleek/dfxrust image, in your local folder run 
+ `GithubActionPlugin/dockers/docker-build.sh` to generate wasm files inside of folder `./dfx-build`.
+
+You can tweak the docker-build.sh and the entrypoint.sh scripts to your needs. Just make sure that the 
+entrypoint.sh matches your Buld.WASM section in github actions. 
