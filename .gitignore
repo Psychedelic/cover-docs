@@ -2,3 +2,4 @@ site
 .DS_Store
 __PROJECT
 **/node_modules
+.idea
