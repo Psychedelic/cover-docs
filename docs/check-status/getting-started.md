@@ -33,4 +33,4 @@ dfx canister --network ic info CANISTER_ID
 ```
 
 - Use Cover SDK ([Guidance and example](https://github.com/Psychedelic/cover-sdk#typescript-example))
-- Use [Cover page]() and search for the canister ID you need (coming soon)
+- Use [Cover App](https://app.covercode.ooo/) and search for the canister ID you need
