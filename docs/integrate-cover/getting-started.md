@@ -12,10 +12,11 @@ To set up the build environment, you need to add Cover's dockerfile to your repo
 
 ##  Build your canister
 
-You can build your canister by providing Cover builder with your build config (these configs are going to be validated by **Cover Validator** first). There are 2 ways to do this:
+You can build your canister by providing Cover builder with your build config (these configs are going to be validated by **Cover Validator** first). There are 3 ways to do this:
 
 - Using **Cover Validator** API ([Guidance and example](https://github.com/Psychedelic/cover-validator))
 - Using **Cover SDK** ([Guidance and example](https://github.com/Psychedelic/cover-sdk))
+- Using [**Cover App**](https://app.covercode.ooo/) to submit your build config
 
 Verifications of the latest build will be stored in Cover canister. 
 
